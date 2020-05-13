@@ -5,19 +5,27 @@ import Contact from './Contact';
 import {BrowserRouter as Router,Switch,Route,Link,} from 'react-router-dom';
 import './home.css';
 const App=props=>{
-  let [ users, setUsers ] = useState({content:""});
-    useEffect(() => {
-        fetch('http://localhost:9000/search-route')
-        .then(res =>res.text())
-        .then(res=> setUsers({content:res}))
-        }, []);
+  let [ users, setUsers ] = useState([]); 
+  useEffect(() => {
+    fetch('http://localhost:9000/search-route')
+    .then(res =>res.json())
+    .then(res=> setUsers(res))
+    }, []);
+  /*const add=(name)=>{
+      setUsers([...users,{id:1,place:name,content:"hello"}]);
+      
+  }*/
   return(
     <Router>
       <div id="home">
       <h1>Places</h1>
       <h5>Travel guide in Myanmar</h5>
       <ul>
-         <li>{users.content}</li>
+        {
+           users.map(i=>{
+            return(<li>{i.id}{i.place} {i.content}</li>)
+          })
+        }
       </ul>
       <Search />
       <ul className="nav">

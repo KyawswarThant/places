@@ -15,11 +15,12 @@ router.get("/:place",function(req,res){
         response=result.map(i=>{
             return i.content;
         })
-        res.status(200).send(JSON.stringify(response[0]));
+        res.redirect('http://localhost:3000')
+        //res.status(200).send(JSON.stringify(response[0]));
     })
 })
 router.get("/",function(req,res){
-    db.information.find({place:"mandalay"},function(err,result){
+    db.information.find(function(err,result){
         response=result.map(i=>{
             return i.content;
         })
