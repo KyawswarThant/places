@@ -22,5 +22,7 @@ app.listen(4000,function(){
             res.status(200).send(JSON.stringify(response[0]));
         })
     })
-    
+    app.get("/",function(req,res){
+        res.write("hello");
+    })
 });
