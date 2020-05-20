@@ -12,6 +12,8 @@
 list-style: none;
 margin: 0;
 padding: 0;
+display: flex;
+flex-direction: column;
 }
 #contact form {
     padding: 20px;
@@ -33,6 +35,15 @@ padding: 0;
     color: red;
     text-align: center;
 }
-#search form{
+#search{
     text-align: right;
+}
+#sec{
+    display: flex;
+    align-items: stretch;
+    height: 30px;
+}
+#aside,#nav{
+    flex-grow: 1;
+    background: yellow;
 }
