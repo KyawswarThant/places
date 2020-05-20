@@ -5,7 +5,7 @@ const Search=props=>{
         let name=nameRef.current.value;
         //props.setUsers([{id:1,place:name,content:"hey"}]);
         fetch("http://localhost:9000/search-route",{method:'POST',
-        headers:{'content-type':'application/x-www-form-urlencoded'},
+        headers:{'content-type':'application/json'},
         body:JSON.stringify(name);
         }).then(res =>res.json())
         .then(res=> props.setUsers(res));
