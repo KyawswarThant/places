@@ -6,10 +6,10 @@ const db=mongoJs('Kyawswar:Kyawswar@localhost/places',['information'])
 const router=express.Router();
 let response;
 router.use(bodyParser.json());
-router.post("/",urlencodedParser,function(req,res){
-    response=req.body;
-    console.log(req.body);
-    db.information.find({place:response},function(err,result){
+router.get("/:place",urlencodedParser,function(req,res){
+    response=req.params;
+    console.log(response.place);
+    db.information.find({place:response.place},function(err,result){
         /*response=result.map(i=>{
             return i.content;
         })

@@ -1,4 +1,5 @@
 import React,{ useState} from 'react';
+//import Place from './Place';
 import Search from './Search';
 import About from './About';
 import Contact from './Contact';
