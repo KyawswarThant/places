@@ -1,0 +1,30 @@
+.body{
+    background-color: gray;
+}
+.section{
+    display: flex;
+    align-items: stretch;
+    height: 400px;
+}
+.article{
+    flex-grow: 1;
+    background-color: grey;
+}
+.nav,.aside{
+    width: 200px;
+    background:linear-gradient(to top,grey,blue);
+}
+.header{
+    background-color:royalblue;
+    height: 100px;
+    text-align: center;
+}
+.footer{
+    background-color:royalblue;
+    height: 100px;
+    text-align: center;
+}
+.nav #link{
+    display: flex;
+    flex-direction: column;
+}
