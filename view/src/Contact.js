@@ -9,8 +9,6 @@ const Contact=props=>{
     }*/
     return(
             <div className="contact">
-                <h1 id="h1">hello</h1>
-                <h2 id="note">Contact Me? <span onClick="">&times;</span></h2>
                 <form action="" method="post">
                     <input type="text" placeholder="Your email"/><br />
                     <textarea placeholder="Your message"></textarea>
